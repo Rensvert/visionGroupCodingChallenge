@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using visionGroupCodingChallenge.Interfaces;
 
 namespace visionGroupCodingChallenge
 {
-    public class Shape
+    public class Shape : IShapeType
     {
-        Shapes.ShapeType type;
+        public Shapes.ShapeType type;
 
         public Shape(Shapes.ShapeType type)
         {
