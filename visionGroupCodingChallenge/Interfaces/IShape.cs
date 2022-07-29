@@ -1,6 +1,6 @@
 ﻿namespace visionGroupCodingChallenge.Interfaces
 {
-    public interface IShapeType
+    public interface IShape
     {
     }
 }

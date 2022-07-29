@@ -2,7 +2,7 @@
 
 namespace visionGroupCodingChallenge
 {
-    public class Shape : IShapeType
+    public class Shape : IShape
     {
         public Shapes.ShapeType type;
         public int Id;

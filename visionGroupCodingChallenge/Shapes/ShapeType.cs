@@ -3,7 +3,7 @@
     // Enum for the different shapes
     public enum ShapeType
     {
-        
+        Unknown,
         Square,
         Ellipse,
         Circle,
