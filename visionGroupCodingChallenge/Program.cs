@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace visionGroupCodingChallenge
 {
@@ -6,7 +7,12 @@ namespace visionGroupCodingChallenge
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+
+            var reader = new StreamReader(@"C:\Users\Rensv\Desktop\Shapes-49464.txt");
+            while (!reader.EndOfStream)
+            {
+                Console.WriteLine(reader.ReadLine());
+            }
         }
     }
 }
