@@ -40,6 +40,7 @@ namespace visionGroupCodingChallenge
             }
             else if (type == ShapeType.Square || type == ShapeType.Triangle)
             {
+                returnShape = new Square(Convert.ToInt32(itemList[0]));
                 returnShape.type = type;
                 returnShape.CenterX = Convert.ToDouble(itemList.ElementAtOrDefault(3) ?? null);
                 returnShape.CenterY = Convert.ToDouble(itemList.ElementAtOrDefault(5) ?? null);

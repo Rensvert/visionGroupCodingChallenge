@@ -30,10 +30,5 @@ namespace visionGroupCodingChallenge
             this.Id = Id;
         }
 
-        public void CalculateArea(Shape shape)
-        {
-
-        }
-
     }
 }
