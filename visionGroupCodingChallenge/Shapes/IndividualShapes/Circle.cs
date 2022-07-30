@@ -1,35 +1,37 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using visionGroupCodingChallenge.Interfaces;
 
 namespace visionGroupCodingChallenge.Shapes
 {
     public class Circle : Shape, IShape
     {
+        public double CenterX { get; set; }
+        public double CenterY { get; set; }
+        public double Radius { get; set; }
+
         public Circle(int Id) : base(Id)
         {
         }
 
         public void CalculateCentroidY(IShape shape)
         {
-            CentroidY = shape.CenterY;
+            CentroidY = CenterY;
         }
 
-        public void CalculateArea(double number)
+        public void CalculateArea(IShape shape)
         {
-            var radiusSquared = Math.PI * number * number;
+            var radiusSquared = Math.PI * Radius * Radius;
             Area = Math.Round(radiusSquared, 11);
         }
 
         public void CalculateCentroidX(IShape shape)
         {
-            CentroidX = shape.CenterX;
+            CentroidX = CenterX;
         }
 
         public void CalculatePerimeter(IShape shape)
         {
-            var circumfrence = shape.Radius * 2 * Math.PI;
+            var circumfrence = Radius * 2 * Math.PI;
             Perimeter = Math.Round(circumfrence, 11);
         }
     }

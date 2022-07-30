@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using visionGroupCodingChallenge.Interfaces;
+﻿using visionGroupCodingChallenge.Interfaces;
 
 namespace visionGroupCodingChallenge.Shapes
 {
     public class Triangle : Shape, IShape
     {
+        public double CenterX { get; set; }
+        public double CenterY { get; set; }
+        public double SideLength { get; set; }
+
         public Triangle(int Id) : base(Id)
         {
         }
@@ -15,7 +16,7 @@ namespace visionGroupCodingChallenge.Shapes
         {
         }
 
-        public void CalculateArea(double number)
+        public void CalculateArea(IShape shape)
         {
         }
 

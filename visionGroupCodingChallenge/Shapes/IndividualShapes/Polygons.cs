@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using visionGroupCodingChallenge.Interfaces;
 
 namespace visionGroupCodingChallenge.Shapes.IndividualShapes
@@ -20,7 +19,7 @@ namespace visionGroupCodingChallenge.Shapes.IndividualShapes
         {
         }
 
-        public void CalculateArea(double number)
+        public void CalculateArea(IShape shape)
         {
         }
 

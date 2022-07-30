@@ -9,13 +9,10 @@
 
         public double Area { get; set; }
         public double Perimeter { get; set; }
-        public double Radius { get; set; }
         public double CentroidX { get; set; }
         public double CentroidY { get; set; }
      
-        public double CenterX { get; set; }
-        public double CenterY { get; set; }
-        public double SideLength;
+
         public double Orientation;
         public double R1;
         public double R2;

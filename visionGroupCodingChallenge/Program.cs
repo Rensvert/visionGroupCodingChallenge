@@ -64,7 +64,7 @@ namespace visionGroupCodingChallenge
         // Perform the operations on the IShape, so that we have the data we need to write.
         static IShape PerformOperations(IShape shape)
         {
-            shape.CalculateArea(shape.Radius);
+            shape.CalculateArea(shape);
             shape.CalculatePerimeter(shape);
             shape.CalculateCentroidX(shape);
             shape.CalculateCentroidY(shape);

@@ -9,12 +9,8 @@
         double Perimeter { get; set; }
         double CentroidX { get; set; }
         double CentroidY { get; set; }
-        double Radius { get; set; }
 
-        double CenterX { get; set; }
-        double CenterY { get; set; }
-
-        void CalculateArea(double number);
+        void CalculateArea(IShape shape);
 
         void CalculatePerimeter(IShape shape);
 

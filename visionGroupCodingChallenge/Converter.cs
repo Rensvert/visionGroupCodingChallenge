@@ -53,7 +53,6 @@ namespace visionGroupCodingChallenge
                 returnShape.CenterY = Convert.ToDouble(itemList.ElementAtOrDefault(5) ?? null);
                 returnShape.SideLength = Convert.ToDouble(itemList.ElementAtOrDefault(7) ?? null);
                 returnShape.Orientation = Convert.ToDouble(itemList.ElementAtOrDefault(9) ?? null);
-                returnShape.Area = 1.11;
                 return returnShape;
 
             }

@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using visionGroupCodingChallenge.Interfaces;
+﻿using visionGroupCodingChallenge.Interfaces;
 
 namespace visionGroupCodingChallenge.Shapes
 {
     public class Ellipses : Shape, IShape
     {
+        public double CenterX { get; set; }
+        public double CenterY { get; set; }
         public Ellipses(int Id) : base(Id)
         {
         }
@@ -15,7 +14,7 @@ namespace visionGroupCodingChallenge.Shapes
         {
         }
 
-        public void CalculateArea(double number)
+        public void CalculateArea(IShape shape)
         {
             
         }
