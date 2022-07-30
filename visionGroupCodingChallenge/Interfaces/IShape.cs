@@ -1,5 +1,6 @@
 ﻿namespace visionGroupCodingChallenge.Interfaces
 {
+    // Interface for the different shapes, and the methods needed to do the different calculations.
     public interface IShape
     {
         int Id { get; set; }

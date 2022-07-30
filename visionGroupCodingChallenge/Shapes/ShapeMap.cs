@@ -1,6 +1,8 @@
 ﻿using CsvHelper.Configuration;
 using visionGroupCodingChallenge.Interfaces;
 
+
+// Mapping class so that we can use CSVHelper.
 namespace visionGroupCodingChallenge.Shapes
 {
     public class ShapeMap : ClassMap<IShape>

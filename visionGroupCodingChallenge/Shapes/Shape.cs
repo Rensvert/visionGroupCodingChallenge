@@ -1,8 +1,6 @@
-﻿using System.Collections.Generic;
-using visionGroupCodingChallenge.Interfaces;
-
-namespace visionGroupCodingChallenge
+﻿namespace visionGroupCodingChallenge
 {
+    // Base class of the different Shapes.
     public class Shape
     {
         public Shapes.ShapeType type;

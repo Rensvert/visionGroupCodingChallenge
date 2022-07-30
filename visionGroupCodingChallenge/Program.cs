@@ -32,9 +32,13 @@ namespace visionGroupCodingChallenge
             using (var writer = new StreamWriter(@"C:\Users\Rensv\Desktop\correctFileTest.txt"))
             using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
             {
+                //register mapping class
                 csv.Context.RegisterClassMap<ShapeMap>();
 
+                //write header
                 csv.WriteHeader<Shape>();
+
+                // this is needed or else you get the header and the first entry on the same line.
                 csv.NextRecord();
                 foreach (var record in records)
                 {
@@ -44,19 +48,20 @@ namespace visionGroupCodingChallenge
             }
         }
 
+        // turns each line into a new Converter Object
         static Converter ConvertToObject(string line)
         {
             return new Converter(line);
         }
 
+        // Makes an IShape
         static IShape ConvertToShape(Converter item)
         {
             return item.ConvertToShape();
         }
 
 
-        // TODO Perform the operations and create new shape 
-        // Create a new Shape so that we still have an unmodified shape, this ensures no side effects on unintentially modifying existing items.
+        // Perform the operations on the IShape, so that we have the data we need to write.
         static IShape PerformOperations(IShape shape)
         {
             shape.CalculateArea(shape.Radius);

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using visionGroupCodingChallenge.Interfaces;
 using visionGroupCodingChallenge.Shapes;
@@ -16,6 +15,7 @@ namespace visionGroupCodingChallenge
             convertItem = item;
         }
 
+        // takes the csv Array and populate the data into the correct Shape Object.
         public IShape ConvertToShape()
         {
 
@@ -86,6 +86,7 @@ namespace visionGroupCodingChallenge
             return null;   
         }
 
+        // Get the enum for the shape we have.
         ShapeType ConvertType(string type)
         {
             switch (type)
