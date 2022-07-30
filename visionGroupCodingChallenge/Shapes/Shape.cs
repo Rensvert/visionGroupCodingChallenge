@@ -1,14 +1,12 @@
-﻿using CsvHelper.Configuration.Attributes;
+﻿using System.Collections.Generic;
 using visionGroupCodingChallenge.Interfaces;
 
 namespace visionGroupCodingChallenge
 {
-    public class Shape : IShape
+    public class Shape
     {
-        [Index(1)]
         public Shapes.ShapeType type;
 
-        [Index(0)]
         public int Id { get; set; }
 
         public double Area { get; set; }
@@ -21,25 +19,21 @@ namespace visionGroupCodingChallenge
         public double CenterY;
         public double SideLength;
         public double Orientation;
+        public double R1;
+        public double R2;
+
+        public List<double> XList;
+        public List<double> YList;
 
         public Shape(int Id)
         {
             this.Id = Id;
         }
 
-        public Shape(int Id, Shapes.ShapeType type,  double CenterX, double CenterY,
-            double SideLength, double Orientation)
+        public void CalculateArea(Shape shape)
         {
-            // The given information.
-            this.Id = Id;
-            this.type = type;
-            this.CenterX = CenterX;
-            this.CenterY = CenterY;
-            this.SideLength = SideLength;
-            this.Orientation = Orientation;
-
-            // Will need to set these later once calculations are done.
 
         }
+
     }
 }
