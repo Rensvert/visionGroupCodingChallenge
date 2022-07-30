@@ -9,17 +9,23 @@ namespace visionGroupCodingChallenge
         public Shapes.ShapeType type;
 
         [Index(0)]
-        public int Id;
+        public int Id { get; set; }
 
-        public double Area;
-        public double Perimeter;
-        public double CentroidX;
-        public double CentroidY;
+        public double Area { get; set; }
+        public double Perimeter { get; set; }
+        public double Radius;
+        public double CentroidX { get; set; }
+        public double CentroidY { get; set; }
+     
         public double CenterX;
         public double CenterY;
         public double SideLength;
         public double Orientation;
 
+        public Shape(int Id)
+        {
+            this.Id = Id;
+        }
 
         public Shape(int Id, Shapes.ShapeType type,  double CenterX, double CenterY,
             double SideLength, double Orientation)
@@ -33,10 +39,7 @@ namespace visionGroupCodingChallenge
             this.Orientation = Orientation;
 
             // Will need to set these later once calculations are done.
-            this.Area = 0;
-            this.Perimeter = 0;
-            this.CentroidX = 0;
-            this.CentroidY = 0;
+
         }
     }
 }
