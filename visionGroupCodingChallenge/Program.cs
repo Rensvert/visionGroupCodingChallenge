@@ -1,10 +1,7 @@
 ﻿using CsvHelper;
-using Newtonsoft.Json;
-using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
-using System.Text;
 using visionGroupCodingChallenge.Interfaces;
 using visionGroupCodingChallenge.Shapes;
 
@@ -24,7 +21,6 @@ namespace visionGroupCodingChallenge
                 ObjectList.Add(shape);
             }
 
-
             var records = new List<IShape>();
             foreach (var shape in ObjectList)
             {
@@ -32,9 +28,7 @@ namespace visionGroupCodingChallenge
                 records.Add(modifiedShape);
             }
 
-            var head = "Test, test2, testttt";
-
-            //before your loop
+            //before the loop
             using (var writer = new StreamWriter(@"C:\Users\Rensv\Desktop\correctFileTest.txt"))
             using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
             {
@@ -48,8 +42,6 @@ namespace visionGroupCodingChallenge
                     csv.NextRecord();
                 }
             }
-            var x = 13;
-
         }
 
         static Converter ConvertToObject(string line)
