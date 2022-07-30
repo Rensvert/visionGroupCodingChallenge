@@ -15,6 +15,7 @@ namespace visionGroupCodingChallenge.Shapes
 
         public void CalculateCentroidY(IShape shape)
         {
+            // Not Yet
         }
 
         public void CalculateArea(IShape shape)
@@ -25,10 +26,31 @@ namespace visionGroupCodingChallenge.Shapes
 
         public void CalculateCentroidX(IShape shape)
         {
+            // Not yet
         }
 
         public void CalculatePerimeter(IShape shape)
         {
+            // This forumla is sorta a mess I believe my Calculation is off a bit, from a rounding error somewhere.
+
+            var StartingPoint = Math.PI * (R1 + R2);
+
+            // need the value of (A-B)^2
+            var squaredMin = Math.Pow(R1 - R2, 2);
+
+            // need the value of (A+B)^2
+            var squaredMax = Math.Pow(R1 + R2, 2);
+
+            var h = squaredMin / squaredMax;
+           
+            var sqrt = Math.Sqrt(4- (3*h));
+
+            var tempPer = StartingPoint * (1 + (3 * h) / (10 + sqrt));
+
+            Perimeter = Math.Round(tempPer, R1.ToString().Length);
+
+
+
         }
     }
 }
