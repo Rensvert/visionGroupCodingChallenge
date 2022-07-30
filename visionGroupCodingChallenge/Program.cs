@@ -14,7 +14,7 @@ namespace visionGroupCodingChallenge
     {
         static void Main(string[] args)
         {
-            var ObjectList = new List<Shape>();
+            var ObjectList = new List<IShape>();
             var reader = new StreamReader(@"C:\Users\Rensv\Desktop\Shapes-49464.txt");
             while (!reader.EndOfStream)
             {
@@ -25,7 +25,7 @@ namespace visionGroupCodingChallenge
             }
 
 
-            var records = new List<Shape>();
+            var records = new List<IShape>();
             foreach (var shape in ObjectList)
             {
                 var modifiedShape = PerformOperations(shape);
@@ -57,7 +57,7 @@ namespace visionGroupCodingChallenge
             return new Converter(line);
         }
 
-        static Shape ConvertToShape(Converter item)
+        static IShape ConvertToShape(Converter item)
         {
             return item.ConvertToShape();
         }
@@ -65,9 +65,10 @@ namespace visionGroupCodingChallenge
 
         // TODO Perform the operations and create new shape 
         // Create a new Shape so that we still have an unmodified shape, this ensures no side effects on unintentially modifying existing items.
-        static Shape PerformOperations(Shape shape)
+        static IShape PerformOperations(IShape shape)
         {
-            // just for testing purposes.
+            shape.CalculateArea(shape.Radius);
+            shape.CalculatePerimeter(shape);
             return shape;
         }
     }

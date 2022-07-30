@@ -16,7 +16,7 @@ namespace visionGroupCodingChallenge
             convertItem = item;
         }
 
-        public Shape ConvertToShape()
+        public IShape ConvertToShape()
         {
 
             var itemList = convertItem.Split(',');
@@ -42,7 +42,6 @@ namespace visionGroupCodingChallenge
                 returnShape.CenterX = Convert.ToDouble(itemList.ElementAtOrDefault(3) ?? null);
                 returnShape.CenterY = Convert.ToDouble(itemList.ElementAtOrDefault(5) ?? null);
                 returnShape.Radius = Convert.ToDouble(itemList.ElementAtOrDefault(7) ?? null);
-                returnShape.Area = 1.199991;
                 return returnShape;
             }
 

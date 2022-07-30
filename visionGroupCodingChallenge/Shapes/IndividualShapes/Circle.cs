@@ -16,9 +16,10 @@ namespace visionGroupCodingChallenge.Shapes
             throw new NotImplementedException();
         }
 
-        public void CalculateArea(Shape shape)
+        public void CalculateArea(double number)
         {
-            throw new NotImplementedException();
+            var radiusSquared = Math.PI * number * number;
+            Area = Math.Round(radiusSquared, 11);
         }
 
         public void CalculateCentroidX(Shape shape)
@@ -26,9 +27,10 @@ namespace visionGroupCodingChallenge.Shapes
             throw new NotImplementedException();
         }
 
-        public void CalculatePerimeter(Shape shape)
+        public void CalculatePerimeter(IShape shape)
         {
-            throw new NotImplementedException();
+            var circumfrence = shape.Radius * 2 * Math.PI;
+            Perimeter = Math.Round(circumfrence, 11);
         }
     }
 }

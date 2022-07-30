@@ -16,9 +16,8 @@ namespace visionGroupCodingChallenge.Shapes
             throw new NotImplementedException();
         }
 
-        public void CalculateArea(Shape shape)
+        public void CalculateArea(double number)
         {
-            throw new NotImplementedException();
         }
 
         public void CalculateCentroidX(Shape shape)
@@ -26,9 +25,8 @@ namespace visionGroupCodingChallenge.Shapes
             throw new NotImplementedException();
         }
 
-        public void CalculatePerimeter(Shape shape)
+        public void CalculatePerimeter(IShape shape)
         {
-            throw new NotImplementedException();
         }
     }
 }

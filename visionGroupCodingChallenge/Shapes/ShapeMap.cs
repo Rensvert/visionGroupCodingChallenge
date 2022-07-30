@@ -3,7 +3,7 @@ using visionGroupCodingChallenge.Interfaces;
 
 namespace visionGroupCodingChallenge.Shapes
 {
-    public class ShapeMap : ClassMap<Shape>
+    public class ShapeMap : ClassMap<IShape>
     {
         public ShapeMap()
         {

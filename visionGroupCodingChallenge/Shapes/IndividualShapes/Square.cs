@@ -4,6 +4,7 @@ namespace visionGroupCodingChallenge.Shapes
 {
     public class Square : Shape, IShape
     {
+
         public Square(int Id) : base(Id)
         {
         }
@@ -13,9 +14,8 @@ namespace visionGroupCodingChallenge.Shapes
             throw new System.NotImplementedException();
         }
 
-        public void CalculateArea(Shape shape)
+        public void CalculateArea(double number)
         {
-            throw new System.NotImplementedException();
         }
 
         public void CalculateCentroidX(Shape shape)
@@ -23,9 +23,8 @@ namespace visionGroupCodingChallenge.Shapes
             throw new System.NotImplementedException();
         }
 
-        public void CalculatePerimeter(Shape shape)
+        public void CalculatePerimeter(IShape shape)
         {
-            throw new System.NotImplementedException();
         }
     }
 }

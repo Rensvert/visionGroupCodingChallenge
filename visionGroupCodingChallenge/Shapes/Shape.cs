@@ -11,7 +11,7 @@ namespace visionGroupCodingChallenge
 
         public double Area { get; set; }
         public double Perimeter { get; set; }
-        public double Radius;
+        public double Radius { get; set; }
         public double CentroidX { get; set; }
         public double CentroidY { get; set; }
      
