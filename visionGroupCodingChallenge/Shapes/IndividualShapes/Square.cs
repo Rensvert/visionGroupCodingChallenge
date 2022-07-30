@@ -9,18 +9,16 @@ namespace visionGroupCodingChallenge.Shapes
         {
         }
 
-        public void CalculatCentroidY(Shape shape)
+        public void CalculateCentroidY(IShape shape)
         {
-            throw new System.NotImplementedException();
         }
 
         public void CalculateArea(double number)
         {
         }
 
-        public void CalculateCentroidX(Shape shape)
+        public void CalculateCentroidX(IShape shape)
         {
-            throw new System.NotImplementedException();
         }
 
         public void CalculatePerimeter(IShape shape)

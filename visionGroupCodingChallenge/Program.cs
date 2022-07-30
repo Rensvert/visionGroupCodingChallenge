@@ -69,6 +69,8 @@ namespace visionGroupCodingChallenge
         {
             shape.CalculateArea(shape.Radius);
             shape.CalculatePerimeter(shape);
+            shape.CalculateCentroidX(shape);
+            shape.CalculateCentroidY(shape);
             return shape;
         }
     }

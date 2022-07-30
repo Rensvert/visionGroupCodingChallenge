@@ -11,9 +11,9 @@ namespace visionGroupCodingChallenge.Shapes
         {
         }
 
-        public void CalculatCentroidY(Shape shape)
+        public void CalculateCentroidY(IShape shape)
         {
-            throw new NotImplementedException();
+            CentroidY = shape.CenterY;
         }
 
         public void CalculateArea(double number)
@@ -22,9 +22,9 @@ namespace visionGroupCodingChallenge.Shapes
             Area = Math.Round(radiusSquared, 11);
         }
 
-        public void CalculateCentroidX(Shape shape)
+        public void CalculateCentroidX(IShape shape)
         {
-            throw new NotImplementedException();
+            CentroidX = shape.CenterX;
         }
 
         public void CalculatePerimeter(IShape shape)

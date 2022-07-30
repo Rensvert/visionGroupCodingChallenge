@@ -15,8 +15,8 @@ namespace visionGroupCodingChallenge
         public double CentroidX { get; set; }
         public double CentroidY { get; set; }
      
-        public double CenterX;
-        public double CenterY;
+        public double CenterX { get; set; }
+        public double CenterY { get; set; }
         public double SideLength;
         public double Orientation;
         public double R1;

@@ -16,18 +16,16 @@ namespace visionGroupCodingChallenge.Shapes.IndividualShapes
             YList = new List<double>();
         }
 
-        public void CalculatCentroidY(Shape shape)
+        public void CalculateCentroidY(IShape shape)
         {
-            throw new NotImplementedException();
         }
 
         public void CalculateArea(double number)
         {
         }
 
-        public void CalculateCentroidX(Shape shape)
+        public void CalculateCentroidX(IShape shape)
         {
-            throw new NotImplementedException();
         }
 
         internal void PopulateXcords(string[] itemList)

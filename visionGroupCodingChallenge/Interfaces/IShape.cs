@@ -10,12 +10,15 @@
         double CentroidY { get; set; }
         double Radius { get; set; }
 
+        double CenterX { get; set; }
+        double CenterY { get; set; }
+
         void CalculateArea(double number);
 
         void CalculatePerimeter(IShape shape);
 
-        void CalculateCentroidX(Shape shape);
+        void CalculateCentroidX(IShape shape);
 
-        void CalculatCentroidY(Shape shape);
+        void CalculateCentroidY(IShape shape);
     }
 }
