@@ -1,4 +1,5 @@
-﻿using visionGroupCodingChallenge.Interfaces;
+﻿using System;
+using visionGroupCodingChallenge.Interfaces;
 
 namespace visionGroupCodingChallenge.Shapes
 {
@@ -6,6 +7,8 @@ namespace visionGroupCodingChallenge.Shapes
     {
         public double CenterX { get; set; }
         public double CenterY { get; set; }
+        public double R1 { get; set; }
+        public double R2 { get; set; }
         public Ellipses(int Id) : base(Id)
         {
         }
@@ -16,7 +19,8 @@ namespace visionGroupCodingChallenge.Shapes
 
         public void CalculateArea(IShape shape)
         {
-            
+            var tempArea = Math.PI * R1 * R2;
+            Area = Math.Round(tempArea, R1.ToString().Length); // round to Sig Figs for a slightly more accurate result
         }
 
         public void CalculateCentroidX(IShape shape)

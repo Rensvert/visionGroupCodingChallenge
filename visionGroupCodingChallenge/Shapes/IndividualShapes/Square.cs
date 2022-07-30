@@ -14,6 +14,7 @@ namespace visionGroupCodingChallenge.Shapes
 
         public void CalculateCentroidY(IShape shape)
         {
+            // skip for now
         }
 
         public void CalculateArea(IShape shape)
@@ -24,6 +25,7 @@ namespace visionGroupCodingChallenge.Shapes
 
         public void CalculateCentroidX(IShape shape)
         {
+            // Skip for now
         }
 
         public void CalculatePerimeter(IShape shape)

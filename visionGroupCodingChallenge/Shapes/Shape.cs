@@ -14,8 +14,7 @@
      
 
         public double Orientation;
-        public double R1;
-        public double R2;
+
 
         public Shape(int Id)
         {

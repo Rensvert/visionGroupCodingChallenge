@@ -65,7 +65,6 @@ namespace visionGroupCodingChallenge
                 returnShape.CenterY = Convert.ToDouble(itemList.ElementAtOrDefault(5) ?? null);
                 returnShape.SideLength = Convert.ToDouble(itemList.ElementAtOrDefault(7) ?? null);
                 returnShape.Orientation = Convert.ToDouble(itemList.ElementAtOrDefault(9) ?? null);
-                returnShape.Area = 111111.11;
                 return returnShape;
             }
 
@@ -79,7 +78,6 @@ namespace visionGroupCodingChallenge
                 returnShape.R1 = Convert.ToDouble(itemList.ElementAtOrDefault(7) ?? null);
                 returnShape.R2 = Convert.ToDouble(itemList.ElementAtOrDefault(9) ?? null);
                 returnShape.Orientation = Convert.ToDouble(itemList.ElementAtOrDefault(11) ?? null);
-                returnShape.Area = 51.11;
                 return returnShape;
             }
             return null;   
