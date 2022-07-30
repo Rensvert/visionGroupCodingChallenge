@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using visionGroupCodingChallenge.Interfaces;
 using visionGroupCodingChallenge.Shapes;
+using visionGroupCodingChallenge.Shapes.IndividualShapes;
 
 namespace visionGroupCodingChallenge
 {
@@ -18,51 +20,60 @@ namespace visionGroupCodingChallenge
         {
 
             var itemList = convertItem.Split(',');
-            var returnShape = new Shape(Convert.ToInt32(itemList[0]));
+            //Shape returnShape = null;
             var type = ConvertType(itemList[1]);
 
             if (type == ShapeType.Polygon)
             {
-
+                var returnShape = new Polygons(Convert.ToInt32(itemList[0]));
                 returnShape.type = type;
-                returnShape.XList = new List<double>();
-                returnShape.YList = new List<double>();
+
+                //    returnShape.PopulateXcords(itemList);
+                returnShape.Area = 19991;
+
+                return returnShape;
 
             }
             else if (type == ShapeType.Circle)
             {
+                var returnShape = new Circle(Convert.ToInt32(itemList[0]));
 
                 returnShape.type = type;
                 returnShape.CenterX = Convert.ToDouble(itemList.ElementAtOrDefault(3) ?? null);
                 returnShape.CenterY = Convert.ToDouble(itemList.ElementAtOrDefault(5) ?? null);
                 returnShape.Radius = Convert.ToDouble(itemList.ElementAtOrDefault(7) ?? null);
-
+                returnShape.Area = 1.199991;
+                return returnShape;
             }
+
             else if (type == ShapeType.Square)
             {
-                returnShape = new Square(Convert.ToInt32(itemList[0]));
+                var returnShape = new Square(Convert.ToInt32(itemList[0]));
                 returnShape.type = type;
                 returnShape.CenterX = Convert.ToDouble(itemList.ElementAtOrDefault(3) ?? null);
                 returnShape.CenterY = Convert.ToDouble(itemList.ElementAtOrDefault(5) ?? null);
                 returnShape.SideLength = Convert.ToDouble(itemList.ElementAtOrDefault(7) ?? null);
                 returnShape.Orientation = Convert.ToDouble(itemList.ElementAtOrDefault(9) ?? null);
                 returnShape.Area = 1.11;
+                return returnShape;
 
             }
+
             else if (type == ShapeType.Triangle)
             {
-                returnShape = new Triangle(Convert.ToInt32(itemList[0]));
+                var returnShape = new Triangle(Convert.ToInt32(itemList[0]));
                 returnShape.type = type;
                 returnShape.CenterX = Convert.ToDouble(itemList.ElementAtOrDefault(3) ?? null);
                 returnShape.CenterY = Convert.ToDouble(itemList.ElementAtOrDefault(5) ?? null);
                 returnShape.SideLength = Convert.ToDouble(itemList.ElementAtOrDefault(7) ?? null);
                 returnShape.Orientation = Convert.ToDouble(itemList.ElementAtOrDefault(9) ?? null);
                 returnShape.Area = 111111.11;
-
+                return returnShape;
             }
 
             else if (type == ShapeType.Ellipse)
             {
+                var returnShape = new Ellipses(Convert.ToInt32(itemList[0]));
 
                 returnShape.type = type;
                 returnShape.CenterX = Convert.ToDouble(itemList.ElementAtOrDefault(3) ?? null);
@@ -71,8 +82,9 @@ namespace visionGroupCodingChallenge
                 returnShape.R2 = Convert.ToDouble(itemList.ElementAtOrDefault(9) ?? null);
                 returnShape.Orientation = Convert.ToDouble(itemList.ElementAtOrDefault(11) ?? null);
                 returnShape.Area = 51.11;
+                return returnShape;
             }
-            return returnShape;
+            return null;   
         }
 
         ShapeType ConvertType(string type)

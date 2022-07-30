@@ -22,9 +22,6 @@ namespace visionGroupCodingChallenge
         public double R1;
         public double R2;
 
-        public List<double> XList;
-        public List<double> YList;
-
         public Shape(int Id)
         {
             this.Id = Id;

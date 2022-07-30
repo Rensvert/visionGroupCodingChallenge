@@ -41,6 +41,7 @@ namespace visionGroupCodingChallenge
                 csv.Context.RegisterClassMap<ShapeMap>();
 
                 csv.WriteHeader<Shape>();
+                csv.NextRecord();
                 foreach (var record in records)
                 {
                     csv.WriteRecord(record);

@@ -2,12 +2,12 @@
 {
     public interface IShape
     {
-        int Id { get; set; }
+        //int Id { get; set; }
 
-        double Area { get; set; }
-        double Perimeter { get; set; }
-        double CentroidX { get; set; }
-        double CentroidY { get; set; }
+        //double Area { get; set; }
+        //double Perimeter { get; set; }
+        //double CentroidX { get; set; }
+        //double CentroidY { get; set; }
 
         void CalculateArea(Shape shape);
 

@@ -1,5 +1,5 @@
 ﻿using CsvHelper.Configuration;
-
+using visionGroupCodingChallenge.Interfaces;
 
 namespace visionGroupCodingChallenge.Shapes
 {
