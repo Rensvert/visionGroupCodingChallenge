@@ -38,7 +38,7 @@ namespace visionGroupCodingChallenge
                 returnShape.Radius = Convert.ToDouble(itemList.ElementAtOrDefault(7) ?? null);
 
             }
-            else if (type == ShapeType.Square || type == ShapeType.Triangle)
+            else if (type == ShapeType.Square)
             {
                 returnShape = new Square(Convert.ToInt32(itemList[0]));
                 returnShape.type = type;
@@ -49,6 +49,18 @@ namespace visionGroupCodingChallenge
                 returnShape.Area = 1.11;
 
             }
+            else if (type == ShapeType.Triangle)
+            {
+                returnShape = new Triangle(Convert.ToInt32(itemList[0]));
+                returnShape.type = type;
+                returnShape.CenterX = Convert.ToDouble(itemList.ElementAtOrDefault(3) ?? null);
+                returnShape.CenterY = Convert.ToDouble(itemList.ElementAtOrDefault(5) ?? null);
+                returnShape.SideLength = Convert.ToDouble(itemList.ElementAtOrDefault(7) ?? null);
+                returnShape.Orientation = Convert.ToDouble(itemList.ElementAtOrDefault(9) ?? null);
+                returnShape.Area = 111111.11;
+
+            }
+
             else if (type == ShapeType.Ellipse)
             {
 
