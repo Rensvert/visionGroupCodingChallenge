@@ -20,7 +20,6 @@ namespace visionGroupCodingChallenge
         {
 
             var itemList = convertItem.Split(',');
-            //Shape returnShape = null;
             var type = ConvertType(itemList[1]);
 
             if (type == ShapeType.Polygon)
@@ -28,8 +27,7 @@ namespace visionGroupCodingChallenge
                 var returnShape = new Polygons(Convert.ToInt32(itemList[0]));
                 returnShape.type = type;
 
-                //    returnShape.PopulateXcords(itemList);
-                returnShape.Area = 19991;
+                PopulateVertList(itemList, returnShape);
 
                 return returnShape;
 
@@ -82,6 +80,16 @@ namespace visionGroupCodingChallenge
             }
             return null;   
         }
+
+        private void PopulateVertList(string[] itemList, Polygons item)
+        {
+            bool isX = false;
+            bool isY = false;
+
+
+        }
+
+
 
         // Get the enum for the shape we have.
         ShapeType ConvertType(string type)
