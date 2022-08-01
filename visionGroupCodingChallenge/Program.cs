@@ -12,7 +12,7 @@ namespace visionGroupCodingChallenge
         static void Main(string[] args)
         {
             var ObjectList = new List<IShape>();
-            var reader = new StreamReader(@"C:\Users\Rensv\Desktop\Shapes-49464.txt");
+            var reader = new StreamReader(@"INSERT FILE PATH HERE");
             while (!reader.EndOfStream)
             {
                 var line = reader.ReadLine();
