@@ -18,7 +18,7 @@ namespace visionGroupCodingChallenge.Shapes
             // Not Yet
         }
 
-        public void CalculateArea(IShape shape)
+        public void CalculateArea()
         {
             var tempArea = Math.PI * R1 * R2;
             Area = Math.Round(tempArea, R1.ToString().Length); // round to Sig Figs for a slightly more accurate result
@@ -29,7 +29,7 @@ namespace visionGroupCodingChallenge.Shapes
             // Not yet
         }
 
-        public void CalculatePerimeter(IShape shape)
+        public void CalculatePerimeter()
         {
             // This forumla is sorta a mess I believe my Calculation is off a bit, from a rounding error somewhere.
 

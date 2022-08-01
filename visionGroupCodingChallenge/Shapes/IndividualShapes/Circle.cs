@@ -18,7 +18,7 @@ namespace visionGroupCodingChallenge.Shapes
             CentroidY = CenterY;
         }
 
-        public void CalculateArea(IShape shape)
+        public void CalculateArea()
         {
             var radiusSquared = Math.PI * Radius * Radius;
             Area = Math.Round(radiusSquared, 11);
@@ -29,7 +29,7 @@ namespace visionGroupCodingChallenge.Shapes
             CentroidX = CenterX;
         }
 
-        public void CalculatePerimeter(IShape shape)
+        public void CalculatePerimeter()
         {
             var circumfrence = Radius * 2 * Math.PI;
             Perimeter = Math.Round(circumfrence, 11);

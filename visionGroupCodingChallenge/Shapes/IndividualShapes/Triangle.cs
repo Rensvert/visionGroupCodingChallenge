@@ -18,7 +18,7 @@ namespace visionGroupCodingChallenge.Shapes
             // skip for now
         }
 
-        public void CalculateArea(IShape shape)
+        public void CalculateArea()
         {
             var sqrt = Math.Sqrt(3) / 4;
             var localArea = sqrt * SideLength * SideLength;
@@ -31,7 +31,7 @@ namespace visionGroupCodingChallenge.Shapes
             // skip for now
         }
 
-        public void CalculatePerimeter(IShape shape)
+        public void CalculatePerimeter()
         {
             var localPer = 3 * SideLength;
             Perimeter = Math.Round(localPer, SideLength.ToString().Length); // round to Sig Figs for a slightly more accurate result

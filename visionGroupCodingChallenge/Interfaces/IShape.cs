@@ -10,9 +10,9 @@
         double CentroidX { get; set; }
         double CentroidY { get; set; }
 
-        void CalculateArea(IShape shape);
+        void CalculateArea();
 
-        void CalculatePerimeter(IShape shape);
+        void CalculatePerimeter();
 
         void CalculateCentroidX(IShape shape);
 

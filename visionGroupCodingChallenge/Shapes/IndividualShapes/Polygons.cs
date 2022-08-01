@@ -20,7 +20,7 @@ namespace visionGroupCodingChallenge.Shapes.IndividualShapes
             // not yet
         }
 
-        public void CalculateArea(IShape shape)
+        public void CalculateArea()
         {
             var j = XList.Count - 1;
 
@@ -50,8 +50,27 @@ namespace visionGroupCodingChallenge.Shapes.IndividualShapes
             throw new NotImplementedException();
         }
 
-        public void CalculatePerimeter(IShape shape)
+        public void CalculatePerimeter()
         {
+            var j = XList.Count - 1;
+
+            if (j <= 0)
+            {
+                return;
+            }
+
+            double tempPerm = 0.0;
+
+            for (int i = 0; i < XList.Count; i++)
+            {
+                var xSquare = Math.Pow(XList[j] - XList[i], 2);
+                var ySquare = Math.Pow(YList[j] - YList[i], 2);
+
+                tempPerm += Math.Sqrt(xSquare + ySquare);
+                j = i;
+            }
+
+            Perimeter = Math.Abs(Math.Round(tempPerm, XList[0].ToString().Length));
         }
 
     }

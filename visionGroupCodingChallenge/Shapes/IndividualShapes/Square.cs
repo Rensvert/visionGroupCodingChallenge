@@ -17,7 +17,7 @@ namespace visionGroupCodingChallenge.Shapes
             // skip for now
         }
 
-        public void CalculateArea(IShape shape)
+        public void CalculateArea()
         {
             var localArea = SideLength * SideLength;
             Area = Math.Round(localArea, SideLength.ToString().Length);
@@ -28,7 +28,7 @@ namespace visionGroupCodingChallenge.Shapes
             // Skip for now
         }
 
-        public void CalculatePerimeter(IShape shape)
+        public void CalculatePerimeter()
         {
             var localPerimeter = SideLength * 4;
             Perimeter = Math.Round(localPerimeter, SideLength.ToString().Length);
