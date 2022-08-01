@@ -23,15 +23,21 @@ namespace visionGroupCodingChallenge.Shapes.IndividualShapes
         public void CalculateArea(IShape shape)
         {
             var j = XList.Count - 1;
-            double tempArea = 0;
+
+            if (j <= 0)
+            {
+                return;
+            }
+
+            double tempArea = 0.0;
 
             for (int i = 0; i < XList.Count; i++)
             {
-                tempArea += (XList[j] - XList[i]) * (YList[j] - YList[i]);
+                tempArea += (XList[j] + XList[i]) * (YList[j] - YList[i]);
                 j = i;
             }
 
-            Area = Math.Round(tempArea / 2, XList[0].ToString().Length);
+            Area = Math.Abs(Math.Round(tempArea / 2, XList[0].ToString().Length));
         }
 
         public void CalculateCentroidX(IShape shape)

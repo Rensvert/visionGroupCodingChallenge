@@ -81,11 +81,37 @@ namespace visionGroupCodingChallenge
             return null;   
         }
 
-        private void PopulateVertList(string[] itemList, Polygons item)
+        private void PopulateVertList(string[] itemList, Polygons polygon)
         {
             bool isX = false;
             bool isY = false;
 
+            foreach(var item in itemList)
+            {
+                if (isX)
+                {
+                    polygon.XList.Add(Convert.ToDouble(item));
+                    isX = false;
+                    continue;
+                }
+                if (isY)
+                {
+                    polygon.YList.Add(Convert.ToDouble(item));
+                    isY = false;
+                    continue;
+                }
+
+                if (item.Contains("X"))
+                {
+                    isX = true;
+                    continue;
+                }
+                if (item.Contains("Y"))
+                {
+                    isY = true;
+                    continue;
+                }
+            }
 
         }
 
